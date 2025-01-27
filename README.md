@@ -1,5 +1,5 @@
 # RUST
-- learning rust from 21 nov 2024 and onwards
+- learning rust 
 - cargo tool
 - basic projects
 - rust book
