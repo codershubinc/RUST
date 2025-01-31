@@ -1,0 +1,21 @@
+# Ignore the target directory
+/target/
+
+# Ignore the Cargo.lock file if you're building a library
+# Cargo.lock
+
+# Ignore the .idea directory (JetBrains IDEs)
+.idea/
+
+# Ignore the .vscode directory (Visual Studio Code)
+.vscode/
+
+# Ignore the .DS_Store file (macOS)
+.DS_Store
+
+# Ignore the Thumbs.db file (Windows)
+Thumbs.db
+
+# Ignore the debug log file (Windows)
+debug.log
+
