@@ -1,9 +1,9 @@
 use std::io;
 
-pub fn input_num() -> u128 {
+pub fn input_num(msg: String) -> u128 {
     let mut input = String::new();
 
-    println!("Enter a number to calculate the factorial: ");
+    println!("{}", msg);
     io::stdin()
         .read_line(&mut input)
         .expect("Failed to read line");
