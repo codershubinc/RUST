@@ -1,0 +1,9 @@
+# Ignore the target directory
+/target/
+
+# Ignore Cargo.lock (if project is not using it)
+/Cargo.lock
+
+# Ignore build artifacts
+**/*.rs.bk
+```
