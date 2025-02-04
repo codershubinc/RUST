@@ -3,6 +3,8 @@ name = "learning_rust_02"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
+[dependencies] 
+
+
 
 

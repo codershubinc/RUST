@@ -12,13 +12,12 @@ pub fn input_num(msg: String) -> u128 {
     return number;
 }
 
-pub fn input_string() -> String {
+pub fn input_string(msg: String) -> String {
     let mut input = String::new();
 
-    println!("Enter a string: ");
+    println!("{}", msg);
     io::stdin()
         .read_line(&mut input)
         .expect("Failed to read line");
-
     return input;
 }

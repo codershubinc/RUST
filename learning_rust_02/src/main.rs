@@ -9,4 +9,5 @@ fn main() {
     let result = factorial::factorial(number);
     println!("The factorial of {} is {}", number, result);
     printing_pattern::triangle_pattern(number);
+    let str = get_input::input_string("Enter a string".to_string());
 }
