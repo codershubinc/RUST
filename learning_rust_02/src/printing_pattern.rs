@@ -1,6 +1,6 @@
 pub fn triangle_pattern(a: u128) -> u128 {
     for i in 1..=a {
-        for j in 1..=i {
+        for _ in 1..=i {
             print!("*");
         }
         println!();
