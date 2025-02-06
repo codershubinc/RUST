@@ -5,7 +5,6 @@
 - basic projects
 - rust book
 
-<img src="At.gif" width="200" height="200"   />
 
 ---
 
@@ -15,11 +14,18 @@
 
 - Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.
 
-![Cargo Crab](./cargo.svg)
 
-##
 
-![R](./r.svg)
-![U](./u.svg)
-![S](./s.svg)
-![T](./t.svg)
+
+<div
+  style="display:flex;justify-content:space-around;"
+  >
+     <img src="./cargo.svg" width="200" height="200"   />
+<img src="At.gif" width="200" height="200"   />
+  <br/>
+   <img src="./r.svg" width="200" height="200"   />
+  <img src="./u.svg" width="200" height="200"   />
+   <img src="./s.svg" width="200" height="200"   />
+    <img src="./t.svg" width="200" height="200"   /> 
+</div>
+
