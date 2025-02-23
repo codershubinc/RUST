@@ -46,3 +46,7 @@ fn main() {
         }
     }
 }
+
+// Run the program using `cargo run` in the terminal
+// The program will generate a random number between 1 and 100 and prompt the user to guess it
+
