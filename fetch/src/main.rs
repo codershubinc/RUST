@@ -11,7 +11,7 @@ struct File {
 // 2. Use the Tokio runtime
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let url = "http://192.168.1.157:8080/files";
+    let url = "http://localhost:8080/api/files/list";
     println!("Fetching {}...", url);
 
     // 3. Await the response
