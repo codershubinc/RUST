@@ -1,3 +1,4 @@
+use sqlx::Row;
 use sqlx::sqlite::{SqlitePool, SqlitePoolOptions};
 
 // Change return type to Result<SqlitePool, ...>
@@ -34,5 +35,27 @@ pub async fn save_file_data(
         .bind(is_dir)
         .execute(pool)
         .await?;
+    Ok(())
+}
+
+pub async fn show_all_files(pool: &SqlitePool) -> Result<(), sqlx::Error> {
+    let rows = sqlx::query("SELECT id, name, path, is_dir FROM files")
+        .fetch_all(pool)
+        .await?;
+
+    for row in rows {
+        println!(
+            "ID: {}, Name: {}, Path: {}, Is Directory: {}",
+            row.get::<i64, _>("id"),
+            row.get::<String, _>("name"),
+            row.get::<String, _>("path"),
+            row.get::<bool, _>("is_dir")
+        );
+    }
+    Ok(())
+}
+
+pub async fn clear_files_table(pool: &SqlitePool) -> Result<(), sqlx::Error> {
+    sqlx::query("DELETE FROM files").execute(pool).await?;
     Ok(())
 }

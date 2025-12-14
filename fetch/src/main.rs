@@ -5,6 +5,7 @@ use serde_json::Value;
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // 1. Initialize DB ONCE at the start
     let pool = db::sql_db().await?;
+    db::clear_files_table(&pool).await?;
 
     let url = "http://localhost:8080/api/files/list";
     println!("Fetching {}...", url);
@@ -28,5 +29,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
         println!("All data saved to database.");
     }
+    println!("Displaying all files from database:");
+    db::show_all_files(&pool).await?;
     Ok(())
 }
