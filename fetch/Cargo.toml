@@ -1,9 +1,10 @@
 [package]
 name = "fetch"
 version = "0.1.0"
-edition = "2024"
-
+edition = "2024" 
 [dependencies]
 reqwest = { version = "0.12.25", features = ["json"] }
 serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.145"
+sqlx = { version = "0.8.6", features = ["runtime-tokio", "sqlite"] }
 tokio = { version = "1.48.0", features = ["full"] }
