@@ -1,3 +1,5 @@
+use crate::printable::Printable;
+
 pub struct Person {
     name: String,
     age: u8,
@@ -15,5 +17,11 @@ impl Person {
             "Hello, my name is  {} ,  and age is {}",
             self.name, self.age
         )
+    }
+}
+
+impl Printable for Person {
+    fn format(&self) -> String {
+        format!("Person: {}", self.name)
     }
 }
