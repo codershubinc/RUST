@@ -1,7 +1,6 @@
 use sqlx::Row;
 use sqlx::sqlite::{SqlitePool, SqlitePoolOptions};
 
-// Change return type to Result<SqlitePool, ...>
 pub async fn sql_db() -> Result<SqlitePool, sqlx::Error> {
     println!("Connecting to database...");
     let pool = SqlitePoolOptions::new()
